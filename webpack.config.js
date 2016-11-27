@@ -7,15 +7,13 @@ module.exports = {
     context: `${ __dirname }/frontend`,
 
     entry: {
-        home: './home',
-        about: './about',
-        common: ['./welcome',  './common']
+        app: './app'
     },
 
     output: {
         path: `${ __dirname }/public`,
-        filename: '[name].js',
-        library: '[name]'
+        publicPath: '/',
+        filename: '[name].js'
     },
 
     watch: NODE_ENV === 'development',
@@ -27,17 +25,7 @@ module.exports = {
     devtool: NODE_ENV === 'development' ? '#cheap-inline-module-source-map' : null,
 
     plugins: [
-        new webpack.NoErrorsPlugin(),
-        new webpack.DefinePlugin({
-            NODE_ENV: JSON.stringify(NODE_ENV),
-            USER: JSON.stringify(process.env.USER)
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'common',
-            minChunks: 2/*,
-            minChunks: 2,
-            chunks: ['home', 'about']*/
-        })
+        new webpack.NoErrorsPlugin()
     ],
 
     resolve: {
