@@ -24,7 +24,8 @@ module.exports = {
     devtool: NODE_ENV === 'development' ? '#cheap-inline-module-source-map' : null,
 
     plugins: [
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin()/*,
+        new webpack.ContextReplacementPlugin('')*/
     ],
 
     resolve: {

@@ -2,10 +2,8 @@
 
 let moduleName = location.pathname.slice(1);
 
-let req = require.context('./routes', true, /\.js$/);
+console.log(moduleName);
 
-req.keys().forEach(function (path) {
-    let module = req(path);
-    module();
+require('bundle-loader!./routes/' + moduleName)(function (route) {
+    route();
 });
-

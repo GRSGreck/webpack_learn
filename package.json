@@ -4,7 +4,7 @@
   "description": "",
   "main": "home.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack",
+    "start": "NODE_ENV=development webpack --display-modules",
     "wp_v": "NODE_ENV=development webpack --display-modules -v",
     "info_wp": "NODE_ENV=development webpack --json --profile >stats.json",
     "static": "static public"
@@ -18,7 +18,11 @@
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-runtime": "^6.18.0",
+    "bundle-loader": "^0.5.4",
     "node-static": "^0.7.9",
     "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "moment": "^2.17.0"
   }
 }
