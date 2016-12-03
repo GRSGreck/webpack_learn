@@ -1,9 +1,17 @@
 'use strict';
 
-let moduleName = location.pathname.slice(1);
+// const moment = require('moment');
+//
+// let today = moment(new Date()).locale('ru');
+//
+// console.log(today.format('DD MMM YYYY'));
 
-console.log(moduleName);
+// const _ = require('lodash');
 
-require('bundle-loader!./routes/' + moduleName)(function (route) {
-    route();
-});
+let users = [
+    { id: 1, name: 'Roman' },
+    { id: 2, name: 'Irina' },
+    { id: 3, name: 'Artem' }
+];
+
+console.log( _.map(users, 'name') );

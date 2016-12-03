@@ -14,6 +14,10 @@ module.exports = {
         path: `${ __dirname }/public/js`,
         filename: '[name].js'
     },
+    //
+    // externals: {
+    //     lodash: '_'
+    // },
 
     watch: NODE_ENV === 'development',
 
@@ -24,8 +28,12 @@ module.exports = {
     devtool: NODE_ENV === 'development' ? '#cheap-inline-module-source-map' : null,
 
     plugins: [
-        new webpack.NoErrorsPlugin()/*,
-        new webpack.ContextReplacementPlugin('')*/
+        // new webpack.ProvidePlugin({
+        //     _: 'lodash'
+        // })
+        // new webpack.NoErrorsPlugin(),
+        // new webpack.ContextReplacementPlugin(/node_modules\/moment\/locale/, /ru|en-gb/)
+        // new webpack.IgnorePlugin(/\.\/locale/, /zh-/)
     ],
 
     resolve: {
@@ -44,6 +52,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
+                // exclude: /node_modules/,
                 query: {
                     presets: ['es2015'],
                     plugins: ['transform-runtime']
