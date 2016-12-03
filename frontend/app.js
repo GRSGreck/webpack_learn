@@ -1,3 +1,5 @@
 'use strict';
 
-import { angular } from 'angular';
+let old = require('old');
+
+old();
