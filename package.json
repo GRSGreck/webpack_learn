@@ -6,6 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=development webpack --display-modules",
     "wp_v": "NODE_ENV=development webpack --display-modules -v",
+    "wp_time": "NODE_ENV=development webpack --profile --display-modules -v",
     "info_wp": "NODE_ENV=development webpack --json --profile >stats.json",
     "static": "static public"
   },

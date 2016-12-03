@@ -53,12 +53,15 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 // exclude: /node_modules/,
+                include: __dirname + '/frontend',
                 query: {
                     presets: ['es2015'],
                     plugins: ['transform-runtime']
                 }
             }
-        ]
+        ],
+
+        noParse: /angular\/angular.js/
     }
 };
 
