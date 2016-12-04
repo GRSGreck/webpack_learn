@@ -1,3 +1,7 @@
+div {
+    box-sizing: border-box;
+}
+
 .menu .title {
     padding: 0 6px 0 16px;
 
