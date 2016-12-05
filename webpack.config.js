@@ -44,5 +44,18 @@ module.exports = {
                 loader: 'file?name=[path][name].[ext]'
             }
         ]
+    },
+
+    devServer: {
+        host: 'localhost',
+        port: 3030,
+        // proxy: {
+        //     '*': 'http://localhost:8080'
+        // }
+        proxy: [{
+            path: '/',
+            target: 'http://localhost:8080'
+        }]
+
     }
 };

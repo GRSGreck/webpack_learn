@@ -5,6 +5,7 @@
   "main": "home.js",
   "scripts": {
     "start": "NODE_ENV=development webpack",
+    "webpack-dev-server": "NODE_ENV=development webpack-dev-server --inline --hot",
     "wp_v": "NODE_ENV=development webpack --display-modules -v",
     "wp_time": "NODE_ENV=development webpack --profile --display-modules -v",
     "info_wp": "NODE_ENV=development webpack --json --profile >stats.json",
@@ -32,7 +33,8 @@
     "pug-loader": "^2.3.0",
     "script-loader": "^0.7.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.3"
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "angular": "^1.5.9",
